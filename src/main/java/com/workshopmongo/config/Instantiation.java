@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import com.workshopmongo.domain.Post;
 import com.workshopmongo.domain.User;
 import com.workshopmongo.dto.AuthorDTO;
-import com.workshopmongo.repository.PostUserRepository;
+import com.workshopmongo.repository.PostRepository;
 import com.workshopmongo.repository.UserRepository; 
 
 @Configuration 
@@ -21,7 +21,7 @@ public class Instantiation implements  CommandLineRunner {
 	private UserRepository userRepository;
 	
 	@Autowired 
-	private PostUserRepository postRepository;
+	private PostRepository postRepository;
 	
 	@Override
 	public void run(String... args) throws Exception {
