@@ -2,40 +2,36 @@ package com.workshopmongo.dto;
 
 import java.io.Serializable;
 
-import com.workshopmongo.domain.User; 
+import com.workshopmongo.domain.User;
 
-public class AuthorDTO  implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	
-	private String id;
-	private String name;
-	
-	public AuthorDTO() {
-		
-	}
-	
-	public AuthorDTO(User obj) {
-		id = obj.getId();
-		name = obj.getName();
-		
-		}
+public class AuthorDTO implements Serializable {
 
-	public String getId() {
-		return id;
-	}
+    private static final long serialVersionUID = 1L;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String id;
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    public AuthorDTO() {
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
-	
+    public AuthorDTO(User obj) {
+        this.id = obj.getId();
+        this.name = obj.getName();
+    }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

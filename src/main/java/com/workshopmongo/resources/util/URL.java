@@ -7,8 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class URL {
+public final class URL {
 
+    private URL() {
+        throw new UnsupportedOperationException("Utility class");
+    }
+
+    // Decodifica parâmetros enviados na URL
     public static String decodeParam(String text) {
         try {
             return URLDecoder.decode(text, "UTF-8");
@@ -17,6 +22,7 @@ public class URL {
         }
     }
 
+    // Converte string em data (com fuso horário GMT)
     public static Date convertDate(String textDate, Date defaultValue) {
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
